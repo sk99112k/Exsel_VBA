@@ -1,0 +1,24 @@
+Sub 売上登録()
+    
+  '変数宣言
+  Dim i
+  
+  For i = 4 To Sheets("一覧").Range("A10000").End(xlUp).Row + 1
+    If Sheets("一覧").Range("A" & i).Value = "" Then
+    
+      With Sheets("一覧")
+        .Range("A" & i).Value = Date
+        .Range("B" & i).Value = Sheets("登録").Range("B3").Value
+        .Range("C" & i).Value = Sheets("登録").Range("B4").Value
+        .Range("D" & i).Value = Sheets("登録").Range("B5").Value
+      End With
+      
+      Exit For
+    End If
+  Next
+
+  MsgBox " 売上登録しました"
+  Sheets("登録").Range("B3:B5").ClearContents
+
+End Sub
+
