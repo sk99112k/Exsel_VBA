@@ -1,0 +1,3 @@
+Sub メッセージ()
+    MsgBox "完了しました"
+End Sub
