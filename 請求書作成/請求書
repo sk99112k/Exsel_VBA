@@ -1,0 +1,25 @@
+Sub 請求書発行()
+
+  Dim i
+  Dim cnt
+  cnt = 10
+
+  Sheets("雛形").Copy After:=Sheets(Sheets.Count)
+  Sheets(Sheets.Count).Name = Sheets("一覧").Range("G4").Value
+
+  Sheets(Sheets.Count).Range("G3").Value = Date
+  Sheets(Sheets.Count).Range("B5").Value = Sheets("一覧").Range("G4").Value
+
+  For i = 4 To Sheets("一覧").Range("A10000").End(xlUp).Row
+    If Sheets("一覧").Range("A" & i).Value = Sheets("一覧").Range("G4").Value Then
+    
+      Sheets(Sheets.Count).Range("B" & cnt).Value = Sheets("一覧").Range("B" & i).Value
+      Sheets(Sheets.Count).Range("E" & cnt).Value = Sheets("一覧").Range("C" & i).Value
+      Sheets(Sheets.Count).Range("F" & cnt).Value = Sheets("一覧").Range("D" & i).Value
+        
+    cnt = cnt + 1
+    End If
+      
+  Next
+
+End Sub
