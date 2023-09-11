@@ -1,0 +1,4 @@
+Sub シート指定()
+    'シート名を指定してB10に100を代入
+    Sheets("Sheet2").Range("B10").Value = 100
+End Sub
