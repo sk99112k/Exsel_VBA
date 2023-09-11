@@ -3,3 +3,13 @@ Sub Ifステートメント()
     MsgBox "合格"
     End If
 End Sub
+
+Sub Ifステートメント(複数)()
+    If Sheets("Sheet2").Range("A1").Value >= 100 Then
+    MsgBox "合格"
+    ElseIf Sheets("Sheet2").Range("A1").Value >= 80 Then
+    MsgBox "いいね"
+    Else
+    MsgBox "頑張りましょう"
+    End If
+End Sub
