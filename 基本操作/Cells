@@ -1,0 +1,5 @@
+Sub Cells練習()
+    'B10に100を代入
+    'Cells(縦, 横)
+    Cells(10, 3).Value = 100
+End Sub
