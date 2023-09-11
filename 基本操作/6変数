@@ -1,0 +1,9 @@
+Sub 変数()
+    'user(変数名),String(データ型)
+    Dim user As String
+    user = "みなみ"
+    
+    'オブジェクトの代入(Setを先頭につける)
+    Dim rng As Range
+    Set rng = Sheets("Sheets2").Range("A1")
+End Sub
