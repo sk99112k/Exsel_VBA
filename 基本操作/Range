@@ -1,0 +1,4 @@
+Sub Range練習()
+    'B20に100を代入
+    Range("B20").Value = 100
+End Sub
