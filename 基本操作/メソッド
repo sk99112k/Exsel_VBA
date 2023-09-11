@@ -1,0 +1,4 @@
+Sub メソッド練習()
+    'B5を選択する
+    Range("B5").Select
+End Sub
