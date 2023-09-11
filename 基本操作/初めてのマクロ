@@ -1,0 +1,3 @@
+Sub 初めてのマクロ()
+    MsgBox "初めてのマクロ"
+End Sub
