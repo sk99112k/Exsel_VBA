@@ -1,0 +1,5 @@
+Sub Ifステートメント()
+    If Sheets("Sheet2").Range("A1").Value >= 80 Then
+    MsgBox "合格"
+    End If
+End Sub
