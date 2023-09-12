@@ -1,0 +1,11 @@
+Sub 二回MsgBoxを表示()
+    Dim i As Long
+    For i = 1 To 2
+        MsgBox " 2回MsgBoxを表示"
+    Next i
+    
+    Dim cnt As Integer
+    For cnt = 1 To 3
+        Range("A1").Value = Range("A1").Value + 2
+    Next cnt
+End Sub
