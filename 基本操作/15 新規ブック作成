@@ -1,0 +1,6 @@
+Sub 新規ブック作成()
+    Dim wb As Workbook
+    Set wb = Workbooks.Add
+    
+    wb.Name = "売上管理シート"
+End Sub
