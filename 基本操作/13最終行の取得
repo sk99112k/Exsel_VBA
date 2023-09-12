@@ -1,0 +1,4 @@
+Sub 最終行取得()
+    'F列の一番下に入力されているセルを選択
+    Cells(Rows.Count, 6).End(xlUp).Select
+End Sub
