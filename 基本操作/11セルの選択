@@ -1,0 +1,4 @@
+Sub セルの範囲指定()
+    'セルB2〜C6を指定
+    Range("B2:C6").Select
+ End Sub
