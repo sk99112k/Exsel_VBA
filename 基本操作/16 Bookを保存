@@ -1,0 +1,8 @@
+Sub ブックを保存し閉じる()
+    'ブック.Close SaveChanges:=True(またはFalse)
+    'FileName:=フォルダの場所¥ファイル名
+End Sub
+
+Sub このBookのパス()
+    MsgBox ThisWorkbook.Path
+End Sub
