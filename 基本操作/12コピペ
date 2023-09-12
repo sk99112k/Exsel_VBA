@@ -1,0 +1,4 @@
+Sub コピペ()
+    'セルB2~C4をE3~F5にコピペ
+    Range("B2:C4").Copy Range("E3")
+ End Sub
