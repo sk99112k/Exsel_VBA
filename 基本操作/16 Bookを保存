@@ -6,3 +6,10 @@ End Sub
 Sub このBookのパス()
     MsgBox ThisWorkbook.Path
 End Sub
+
+Sub 画面の更新をとめる()
+    '画面の更新を止めることで処理速度を早めることが可能
+    '処理中の見栄えを良くする効果もある
+    Application.ScreenUpdating = False (更新を止める)
+    Application.ScreenUpdating = true (更新を再開する)
+End Sub
