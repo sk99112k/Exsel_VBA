@@ -1,0 +1,39 @@
+Sub 新規ブック保存()
+
+    '担当者シートの最終行を取得'
+    Dim staffName As String
+    Dim mastaRng As Range
+    Dim lastRow As Long
+    lastRow = Sheets("担当者一覧").Cells(Rows.Count, 1).End(xlUp).Row   '.Rowは行数を表す'
+    
+    Application.ScreenUpdating = False   '画面の更新停止'
+    
+    '繰り返し処理'
+    Dim i As Long
+    For i = 3 To lastRow
+    
+        '担当者で抽出'
+        staffName = Sheets("担当者一覧").Cells(i, 1).Value
+        Range("B2").AutoFilter field:=4, Criteria1:=staffName
+        Set mastaRng = Range("B2").CurrentRegion
+        
+        '新規ブック作成'
+        Dim wb As Workbook
+        Set wb = Workbooks.Add
+        
+        'コピー& ペースト'
+        mastaRng.Copy wb.Worksheets("Sheet1").Range("B2")
+        
+        'ブックを保存して閉じる'
+        wb.Close savechange:=True, FileName:=ThisWorkbook.Path & "¥売上実績( " & staffName & ").xlsx"
+        
+    Next i  '次へ'
+    
+    Range("B2").AutoFilter  'フィルター解除'
+    
+    Application.ScreenUpdating = True   '画面の更新再開'
+    
+    '完了したことのメッセージ'
+    MsgBox "各売上実績データを作成いたしました"
+    
+End Sub
