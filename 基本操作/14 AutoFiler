@@ -1,6 +1,14 @@
-
-
-
+Sub フィルター練習()
+    '範囲の角のセル.AutFilter field:=抽出の対象列 , Criteria1:=検索する値 ,
+                                                          'Operator:=抽出条件, Criteria2:=二つ目の検索値
+                                                          
+    Range("A1").AutoFilter field:=2, Criteria1:="C"
+    
+    '（解除）
+    '範囲の角のセル.AutFilter   もしくは   シート.AutFilterMode = False
+    
+    Range("A1").AutoFilter
+End Sub
 
 日付	氏名	売上
 2/1/23	a	1000
