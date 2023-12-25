@@ -1,0 +1,18 @@
+Sub ShowMsgBox()
+    Dim LastRow As Integer
+    Dim Total As Double
+    Dim Count As Double
+    Dim i As Integer
+
+    LastRow = Cells(Rows.Count,1).End(xlUp).Row
+    Total = 0
+    Count = 0
+
+    For i = 2 To LastRow
+        Cells(i,4) = Cells(i,2) * Cells(i,3)
+        Total = Cells(i,4) + Total
+    Next
+
+    Count = Total / LastRow - 1
+    MsgBox "合計は" & Total & "平均は" & Count
+End Sub
